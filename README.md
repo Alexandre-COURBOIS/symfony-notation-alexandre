@@ -19,15 +19,18 @@ openssl rsa -pubout -in config/jwt/private.pem -out config/jwt/public.pem
 
 ```
 
+Copy thoses keys in the jwt folder previously created.
+
 ### second step
-* Tap the command:
+* Go inside the project and Tap the command:
 ```
 composer install
 ```
 
 ### third step
-* Create the file .env.local
-* Copy the content of the file ".env" and create a file name ".env.loca" and put your own informations :
+
+* Create the file .env.local at project root
+* Copy the content of the file ".env" and create a file name ".env.local" and put your own informations :
     * On "DATABASE_URL".
     * On "JWT_PASSPHRASE".
 

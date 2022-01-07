@@ -28,6 +28,10 @@ class Video
      *     message="Merci de renseigner votre Nom.",
      *     groups={"newVideo"}
      *     )
+     *
+     * @Assert\NotBlank(
+     *     message="Merci de renseigner votre Nom.",
+     *     )
      */
     private $Nom;
 
@@ -38,6 +42,10 @@ class Video
      *     message="Merci de renseigner un Synopsis.",
      *     groups={"newVideo"}
      *     )
+     *
+     * @Assert\NotBlank(
+     *     message="Merci de renseigner un Synopsis.",
+     *     )
      */
     private $Synopsis;
 
@@ -47,6 +55,10 @@ class Video
      * @Assert\NotBlank(
      *     message="Merci de renseigner un type série ou film.",
      *     groups={"newVideo"}
+     *     )
+     *
+     * @Assert\NotBlank(
+     *     message="Merci de renseigner un type série ou film.",
      *     )
      *
      *
