@@ -70,6 +70,10 @@ class RegisterController extends AbstractController
      */
     public function registerUserWebsite(Request $request,UserPasswordHasherInterface $passwordHasher, EntityManagerInterface $em): Response
     {
+        if ($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')) {
+            return $this->redirectToRoute('home');
+        }
+
         $user = new User();
 
         $form = $this->createForm(RegisterUserType::class, $user);
@@ -100,6 +104,5 @@ class RegisterController extends AbstractController
             'form' => $form->createView()
         ]);
     }
-
 
 }
