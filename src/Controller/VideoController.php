@@ -72,6 +72,12 @@ class VideoController extends AbstractController
      */
     public function getOneVideoApi($id_item, VideoRepository $videoRepository): JsonResponse
     {
+        $video = $videoRepository->findOneBy(['id' => $id_item]);
+
+        if (!empty($video)) {
         return JsonResponse::fromJsonString($this->serializerService->SimpleSerializer($videoRepository->findOneBy(['id' => $id_item]),'json'),Response::HTTP_OK);
+        } else {
+            return new JsonResponse("We can't  find this video", Response::HTTP_BAD_REQUEST);
+        }
     }
 }
