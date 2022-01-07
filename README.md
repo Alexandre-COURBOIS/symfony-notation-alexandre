@@ -98,5 +98,6 @@ Finaly : Run the application with the command
 ```
 symfony server:start
 ```
-
+You can use post man with api road 
+Or 
 Go to localhost:8000 register yourself and enjoy the project !
