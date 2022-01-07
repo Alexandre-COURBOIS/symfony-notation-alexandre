@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {% if videos is defined %}
+                {% for video in videos %}
+                    <div class="col mt-3">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="https://picsum.photos/75" alt="picsum image">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ video.nom }}</h5>
+                                <h4>{{ video.type }}</h4>
+                                <p class="card-text">{{ video.synopsis }}</p>
+                                <a href="{{ path('video_one', {'id': video.id}) }}" class="btn btn-primary">Voir le/la {{ video.type }}</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

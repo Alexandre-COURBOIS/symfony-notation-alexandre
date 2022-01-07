@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajout vidéo{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-center my-5">Ajout d'une vidéo</h1>
+        {{ form_start(form) }}
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-light">
+                    <h2 class="alert-heading">Ajout de la vidéo</h2>
+                    {{ form_row(form.Nom) }}
+                </div>
+                <div class="alert alert-light">
+                    {{ form_row(form.Synopsis) }}
+                </div>
+                <div class="alert alert-light">
+                    {{ form_row(form.Type) }}
+                    <div class="containerSubmitRegisterbtn mt-5">
+                        <button type="submit" class="btn btn-success submitRegisterBtn"><i class="fas fa-check"></i>
+                            Ajout de la vidéo
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

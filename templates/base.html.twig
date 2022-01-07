@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    {% block head %}{% endblock %}
+    <title>Alexandre 3BCI - {% block title %}Bienvenue{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <script src="https://kit.fontawesome.com/12901c435e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+{% include 'common/header.html.twig' %}
+
+{% block body %}{% endblock %}
+
+{% include 'common/footer.html.twig' %}
+
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+{% block javascripts %}{% endblock %}
+
+</body>
+
+
+</html>
+
+

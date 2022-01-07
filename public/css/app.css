@@ -1,0 +1,30 @@
+.containerSubmitRegisterbtn{
+    text-align: center;
+}
+
+.submitRegisterBtn {
+    width: 100%;
+}
+
+footer div h3 {
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+}
+
+footer div p a  {
+    list-style: none;
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+}
+
+footer div ul {
+    display: inline-block;
+}
+
+footer .trait {
+    border-top: 1px solid white;
+}
+
+footer .copyright{
+    margin-top: 5px;
+}

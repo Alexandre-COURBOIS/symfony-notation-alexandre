@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Vidéo{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <img class="card-img-top" width="250" height="600" src="https://picsum.photos/50" alt="picsum image">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ video.nom }}</h5>
+                <h4>{{ video.type }}</h4>
+                <p class="card-text">{{ video.synopsis }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
